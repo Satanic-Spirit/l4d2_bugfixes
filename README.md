@@ -2,7 +2,7 @@
 
 https://forums.alliedmods.net/showthread.php?t=121945
 
-This extension try fix next bugs on server have more than 8 players:
+This extension tries to fix common bugs on server have more than 8 players:
 1) Survivor finale score bug
 2) Charger stop bug
 3) Witch incorrect player attack
