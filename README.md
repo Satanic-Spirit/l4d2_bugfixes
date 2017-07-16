@@ -10,6 +10,8 @@ This extension tries to fix common bugs on server have more than 8 players:
 3) Witch incorrect player attack
 
 Changelog
+1.0.2.1
+- Updated all signatures to proper syntax.
 1.0.2
 - Fixed offset for WitchAttack->m_iAttackCharacterNumber (windows only).
 - Fixed Sacrifice campaign score calculating(Valve bug). Thanks for spumer
