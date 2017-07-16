@@ -12,7 +12,7 @@
 #define SMEXT_CONF_NAME			"[L4D2] 8+ Players BugFixes"
 #define SMEXT_CONF_DESCRIPTION		"This extension try fix some bugs on server have more than 8 players"
 #define SMEXT_CONF_VERSION		"1.0.2"
-#define SMEXT_CONF_AUTHOR		"V10, Accelerator, $atanic $pirit"	   
+#define SMEXT_CONF_AUTHOR		"V10, Accelerator, $atanic $pirit"
 #define SMEXT_CONF_URL			"https://forums.alliedmods.net/showthread.php?t=121945"
 #define SMEXT_CONF_LOGTAG		"BugFixes"
 #define SMEXT_CONF_LICENSE		"GPL"
@@ -27,7 +27,7 @@
  * @brief Sets whether or not this plugin required Metamod.
  * NOTE: Uncomment to enable, comment to disable.
  */
-#define SMEXT_CONF_METAMOD		
+#define SMEXT_CONF_METAMOD
 
 /** Enable interfaces you want to use here by uncommenting lines */
 //#define SMEXT_ENABLE_FORWARDSYS
