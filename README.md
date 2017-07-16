@@ -1,5 +1,6 @@
 # l4d2 Bug Fixes by V10
 
+contributors Accelerator and $atanic $pirit
 https://forums.alliedmods.net/showthread.php?t=121945
 
 This extension tries to fix common bugs on server have more than 8 players:
