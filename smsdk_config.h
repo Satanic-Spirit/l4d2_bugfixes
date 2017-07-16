@@ -12,8 +12,8 @@
 #define SMEXT_CONF_NAME			"[L4D2] 8+ Players BugFixes"
 #define SMEXT_CONF_DESCRIPTION		"This extension try fix some bugs on server have more than 8 players"
 #define SMEXT_CONF_VERSION		"1.0.2"
-#define SMEXT_CONF_AUTHOR		"V10"	   
-#define SMEXT_CONF_URL			"http://sourcemod.v10.name/"
+#define SMEXT_CONF_AUTHOR		"V10, Accelerator, $atanic $pirit"	   
+#define SMEXT_CONF_URL			"https://forums.alliedmods.net/showthread.php?t=121945"
 #define SMEXT_CONF_LOGTAG		"BugFixes"
 #define SMEXT_CONF_LICENSE		"GPL"
 #define SMEXT_CONF_DATESTRING	__DATE__
