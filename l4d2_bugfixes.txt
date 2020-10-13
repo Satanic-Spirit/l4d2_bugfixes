@@ -13,8 +13,8 @@
 			
 			"SurvivorCounters"
 			{
-				"linux"		"1048"
-				"windows"	"1056"
+				"linux"		"1068"
+				"windows"	"1072"
 			}
 						
 			/* Offset into CDirectorMusicBanks::OnRoundStart */
