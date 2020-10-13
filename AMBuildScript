@@ -184,7 +184,7 @@ class ExtensionConfig(object):
         cxx.cxxflags += ['-Wno-deprecated-register']
       else:
         cxx.cxxflags += ['-Wno-deprecated']
-      cxx.cflags += ['-Wno-sometimes-uninitialized']
+      cxx.cflags += ['-Wno-uninitialized']
 
     if have_gcc:
       cxx.cflags += ['-mfpmath=sse']
