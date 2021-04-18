@@ -33,6 +33,9 @@ void **g_pDirector = NULL;
 ICvar *icvar = NULL;
 ConVar *gcv_mp_gamemode = NULL;
 
+
+IForward *g_pWitchVictimFwd = NULL;
+
 int g_SurvivorCountsOffset = -1;
 int g_WitchACharasterOffset = -1;
 //int g_WitchACharasterOffset2 = -1;
@@ -110,6 +113,12 @@ DETOUR_DECL_MEMBER1(WitchAttack__WitchAttack, void* ,CBaseEntity*,pEntity)
   }else{
 	  g_pSM->LogMessage(myself,"WitchAttack created for %d entity.",client);
   }
+  
+  // todo: do we want to fill result with with the game's result? perhaps the forward path is more performant...
+  g_pWitchVictimFwd->PushCell(player->GetIndex());
+	
+  cell_t retValue = 0;
+  g_pWitchVictimFwd->Execute(&retValue);
   
   void*result=DETOUR_MEMBER_CALL(WitchAttack__WitchAttack)(pEntity);
  // try{
@@ -251,6 +260,8 @@ bool BugFixes::SDK_OnLoad( char *error, size_t maxlength, bool late )
 			return false;
 		g_pDirector = reinterpret_cast<void **>(addr);
 	#endif
+	
+	g_pWitchVictimFwd = forwards->CreateForward( "BF_OnWitchVictim", ET_Hook, 1, NULL, Param_Cell );
 
 	return true;
 }
@@ -268,6 +279,9 @@ void BugFixes::SDK_OnUnload()
 	//remove hooks
 	RemoveHooks();
 
+	//Release forward
+	forwards->ReleaseForward( g_pWitchVictimFwd );
+	
 	gameconfs->CloseGameConfigFile(g_pGameConf);
 }
 
@@ -336,6 +350,3 @@ void BugFixes::RemoveHooks()
 		Detour_CTerrorGameRules__CalculateSurvivalMultiplier = NULL;
 	}
 }
-
-
-
